@@ -1,0 +1,38 @@
+{
+    "name": "pointpay/crowdin-exporter",
+    "description": "Export your Laravel translation to crowdin service!",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Vitaliy Ilinov",
+            "email": "v.ilyinov@pointpay.io",
+            "homepage": "https://gitlab.com/pointpayio/crowdin-exporter/",
+            "role": "Developer"
+        }
+    ],
+    "minimum-stability": "dev",
+    "prefer-stable": true,
+    "require": {
+        "php": "^8.0",
+        "crowdin/crowdin-api-client": "^1.7",
+        "illuminate/support": "^8.0|^9.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Pointpay\\CrowdinExporter\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Pointpay\\CrowdinExporter\\": "tests/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Pointpay\\CrowdinExporter\\CrowdinExporterProvider"
+            ]
+        }
+    }
+}
